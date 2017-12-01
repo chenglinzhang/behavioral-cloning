@@ -92,6 +92,6 @@ I finally randomly shuffled the data set and put 20% of the data into a validati
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 21 as evidenced by the tests. I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
-I stareted off with the default driving speed of 9 mph. The final trained model could actually achieve the max driving speed of 30 mph, as shown in the following video:
+I started off with the default driving speed of 9 mph. The final trained model could actually achieve the max driving speed of 30 mph, as shown in the following video:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/xP5Y3oW2rjQ/0.jpg)](https://www.youtube.com/watch?v=xP5Y3oW2rjQ)
