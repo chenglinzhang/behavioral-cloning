@@ -14,14 +14,14 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image5]: ./examples/model_summary.png "Model Image"
-[image6]: ./examples/center_sample.png "Normal Image"
-[image7]: ./examples/center_sample_flipped.png "Flipped Image"
+[image5]: ./images/model_summary.png "Model Image"
+[image6]: ./images/center_sample.png "Normal Image"
+[image7]: ./images/center_sample_flipped.png "Flipped Image"
 
 
-###Files Submitted & Code Quality
+### Files Submitted & Code Quality
 
-####1. Submission includes all required files and can be used to run the simulator in autonomous mode
+#### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * behavioral-cloning.py containing the script to create and train the model
@@ -30,53 +30,53 @@ My project includes the following files:
 * model.h5 containing a trained convolution neural network 
 * README.md (this file) summarizing the results
 
-####2. Submission includes functional code
+#### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 ```sh
 python3 drive.py model.h5
 ```
 
-####3. Submission code is usable and readable
+#### 3. Submission code is usable and readable
 
 The behavioral-cloning.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. An appropriate model architecture has been employed
+#### 1. An appropriate model architecture has been employed
 
 Nvidia model has been used, which consists of 5 Conv2D layers with depths between 24, 36, 48, 64, and 64 (function nvidia_model() in behavioral-cloning.py) 
 
 The model uses a RELU layer for each Con2D layer to introduce nonlinearity, and the data is normalized in the model using a Keras lambda layer. 
 
-####2. Attempts to reduce overfitting in the model
+#### 2. Attempts to reduce overfitting in the model
 
 The model contains a dropout layer in order to reduce overfitting. 
 
 The model was trained and validated on the given dataset driving_log.csv and the associated images in a random 80/20 split. The validation ensured that the model was not overfitting. The model was tested by running it through the simulator. With the limited dataset, the model actually could stay on the track. It rarelly drove to the edges and it could recover when it happened. 
 
-####3. Model parameter tuning
+#### 3. Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually.
 
-####4. Appropriate training data
+#### 4. Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road with .20 steering angle corrections from both side images. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### 1. Solution Design Approach
 
 Nvidia model has been used, with an additional dropout layer to combat the overfitting. 
 
 The vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Final Model Architecture
+#### 2. Final Model Architecture
 
 The final keras model architecture (function nvidia_model() in  behavioral-cloning.py) is summarized in the following:
 
 ![alt text][image5]
 
-####3. Creation of the Training Set & Training Process
+#### 3. Creation of the Training Set & Training Process
 
 I used the given dataset only to train and validate the self-driving. Here is an example image of center lane driving:
 
