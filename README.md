@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 
 [image5]: ./images/model_summary.png "Model Image"
 [image6]: ./images/center_sample.png "Normal Image"
-[image7]: ./images/center_sample_flipped.png "Flipped Image"
+[image7]: ./images/center_flipped_sample.png "Flipped Image"
 
 
 ### Files Submitted & Code Quality
@@ -82,7 +82,7 @@ I used the given dataset only to train and validate the self-driving. Here is an
 
 ![alt text][image6]
 
-To augment the data sat, I also flipped images and angles thinking that this would the recovery if it went off the track. For example, here is an image that has then been flipped:
+To augment the dataset, I also flipped images and angles thinking that this would the recovery if it went off the track. For example, here is an image that has then been flipped:
 
 ![alt text][image7]
 
