@@ -97,8 +97,8 @@ def generate_data(dataset, batch_size = 32):
 def nvidia_model():
     model = Sequential()
     
-    model.add(Lambda(lambda x: x / 127.5 - 1.0, input_shape = (160, 320, 3)))
     model.add(Cropping2D(cropping = ((60, 20), (0, 0))))
+    model.add(Lambda(lambda x: x / 127.5 - 1.0, input_shape = (160, 320, 3)))
     
     model.add(Conv2D(24, 5, strides = (2, 2), activation = 'relu'))
     model.add(Dropout(0.7))
